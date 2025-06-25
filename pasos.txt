@@ -1,0 +1,34 @@
+Repositorio: frontend-E1
+Ubicación Remota: https://github.com/vichiPaz/frontend-E1
+Ubicación local: C:\Users\issab\OneDrive\Escritorio\1\frontend-E1
+
+
+Se realizo primero un repositorio, luego cada integrante lo clono con git clone SSH 
+posteriormente cada integrante integra un archivo .txt con su nombre 
+cada integrante crea una rama con su nombre. 
+
+Pasos realizados:
+
+1. Inicialización del repositorio:
+   - Se ejecutó `git init` pero no se había hecho un commit inicial, lo que impedía crear ramas.
+   - Solución: se agregó al menos un archivo y se hizo un primer commit con:
+     git add .
+     git commit -m "Primer commit del proyecto"
+
+2. Intento de hacer push a `origin/main`:
+   - Apareció el error: "Updates were rejected because the remote contains work that you do not have locally."
+   - Significaba que la rama `main` local y remota habían divergido (cada una tenía 2 commits diferentes).
+   - Solución: fusión de historiales con:
+     git pull origin main --allow-unrelated-histories
+   - Git solicitó mensaje de fusión, se editó y guardó para completar el merge.
+
+3. Push exitoso al repositorio remoto:
+   - Se ejecutó:
+     git push origin main
+   - Esto subió el historial combinado (local + remoto) correctamente.
+
+4. Creación de nueva rama:
+   - Luego de tener `main` actualizado, se creó la rama deseada:
+     git checkout -b (NOMBRE_RAMA)
+
+5. Se integran todos los cambios de los demás compañeros con un fetch 
